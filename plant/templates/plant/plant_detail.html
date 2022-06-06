@@ -1,0 +1,93 @@
+{% extends 'plant/base.html' %}
+
+{% block content %}
+    <div class="plant">
+        <h1>{{ plant.제목 }}</h1>
+
+        <table border="1">
+            {% if plant.학명 %}            
+                <tr>
+                    <td>학명</td>
+                    <td>{{ plant.학명 }}</td>                
+                </tr>
+            {% endif %}
+            {% if plant.문 %}            
+                <tr>
+                    <td>문</td>
+                    <td>{{ plant.문 }}</td>                
+                </tr>
+            {% endif %}    
+            {% if plant.강 %}            
+                <tr>
+                    <td>강</td>
+                    <td>{{ plant.강 }}</td>                
+                </tr>
+            {% endif %}
+            {% if plant.목 %}            
+                <tr>
+                    <td>목</td>
+                    <td>{{ plant.목 }}</td>                
+                </tr>
+            {% endif %}
+            {% if plant.원산지 %}            
+                <tr>
+                    <td>원산지</td>
+                    <td>{{ plant.원산지 }}</td>                
+                </tr>
+            {% endif %}
+            {% if plant.분포지 %}            
+                <tr>
+                    <td>분포지</td>
+                    <td>{{ plant.분포지 }}</td>                
+                </tr>
+            {% endif %}    
+            {% if plant.서식지 %}            
+                <tr>
+                    <td>서식지</td>
+                    <td>{{ plant.서식지 }}</td>                
+                </tr>
+            {% endif %}
+            {% if plant.크기 %}            
+                <tr>
+                    <td>크기</td>
+                    <td>{{ plant.크기 }}</td>                
+                </tr>
+            {% endif %}
+            {% if plant.꽃의색깔 %}            
+                <tr>
+                    <td>꽃의색깔</td>
+                    <td>{{ plant.꽃의색깔 }}</td>                
+                </tr>
+            {% endif %}  
+            {% if plant.개화시기 %}            
+                <tr>
+                    <td>개화시기</td>
+                    <td>{{ plant.개화시기 }}</td>                
+                </tr>
+            {% endif %}
+            {% if plant.생활형 %}            
+                <tr>
+                    <td>생활형</td>
+                    <td>{{ plant.생활형 }}</td>                
+                </tr>
+            {% endif %}              
+
+        </table>                
+        </table>            
+        </table>
+
+        <p>
+            {% for photo in plant.photo_set.all%}
+                <img src="{{photo.image.url}}"><br>
+            {% endfor %}
+        </p>
+        <p>{{ plant.설명|linebreaksbr }}</p>
+    </div>
+{% endblock %}
+
+
+{% if student_list %}
+    총 학생 수 : {{ student_list|length }}
+{% else %}
+    학생이 없어요!
+{% endif %}
