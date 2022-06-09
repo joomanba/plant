@@ -3,8 +3,7 @@
 {% block content %}
     <div class="plant">
         <h2>{{ plant.제목 }}</h2>
-        <div style="overflow-x:auto;">
-            <table border="1">
+            <table>
                 {% if plant.학명 %}            
                     <tr>
                         <td>학명</td>
@@ -71,12 +70,10 @@
                         <td>{{ plant.생활형 }}</td>                
                     </tr>
                 {% endif %}              
-            </table>  
-        </div>              
-
+            </table>               
         <p>
             {% for photo in plant.photo_set.all%}
-                <img src="{{photo.image.url}}"><br>
+                <img src="{{photo.image.url}}"><br><br>
             {% endfor %}
         </p>
         <p>{{ plant.설명|linebreaksbr }}</p>
