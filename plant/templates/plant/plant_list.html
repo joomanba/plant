@@ -2,20 +2,25 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />      
         <title>Plant Encyclopedia</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{% static 'css/plant.css' %}">
+        <link rel="stylesheet" href="{% static 'css/plant.css' %}" />
     </head>
     <body>
         <div>
             <h1><a href="/">식물도감</a></h1>
         </div>
 
+        <div class="search">
+            <form action="/search" method="GET">
+                <input id='search' type="text" name="q" placeholder="검색어 입력">
+            </form>
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
+        </div>
+
         {% for plant in plants %}
             <div>
-                <h1><a href="{% url 'plant_detail' pk=plant.pk %}">{{ plant.이름 }}</a></h1>
+                <h2><a href="{% url 'plant_detail' pk=plant.pk %}">{{ plant.이름 }}</a></h2>
             </div>    
         {% endfor %}
     </body>
