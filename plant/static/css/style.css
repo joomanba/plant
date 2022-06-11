@@ -25,6 +25,7 @@ body {
   flex-direction: column;
   /* justify-content: center; */
   align-items: center; 
+  color: var(--color-black);
 }
 
 .logo {
@@ -121,5 +122,58 @@ body {
 .pop-up_message {
   display: block;
   font-size: 38px;
+}
+
+.search {
+  position: relative;
+  width: 90%;
+}
+
+.search_txt {
+  width: 100%;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.search_img {
+  position : absolute;
+  width: 17px;
+  top: 10px;
+  right: 12px;
+  margin: 0;
+}
+
+.desc {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-blue);
+  padding: var(--base-space);
+}
+
+.member {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: var(--base-space);
+}
+
+table {
+  border: 1px solid #444444;
+  border-collapse: collapse;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+th, td {
+  border: 1px solid #444444;
+  padding: 10px;
 }
 

@@ -1,5 +1,8 @@
 
-<h2>{{ plant.제목 }}</h2>
+<section class="title">
+    {{ plant.제목 }}
+</section>
+
 <p>
     <table style="width:100%; max-width:640px;">
         {% if plant.학명 %}            
@@ -72,10 +75,10 @@
 </p>            
 <p>
     {% for photo in plant.photo_set.all%}
-        <img src="{{photo.image.url}}" style="width:100%; max-width:640px; max-height:auto;"><br><br>
+        <img src="{{photo.image.url}}" style="width:100%; max-width:640px; max-height:auto;"><br>
     {% endfor %}
 </p>
-<p>{{ plant.설명|linebreaksbr }}</p>
+<p class="desc">{{ plant.설명|linebreaksbr }}</p>
 
 
 
