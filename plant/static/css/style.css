@@ -9,7 +9,7 @@
 
   /* size */
   --base-space: 8px;
-  --size-button: 60px;
+  --size-button: 50px;
   --size-thumbnail: 50px;
   --size-border: 4px;
   --font-size: 18px;
@@ -60,7 +60,8 @@ body {
 
 .colorBtn {
   font-size: var(--font-size);
-  padding: calc(var(--base-space) * 2);
+  font-style: var(--color-black);
+  padding: calc(var(--base-space) * 1);
   border-radius: var(--size-border);
 }
 
@@ -78,7 +79,7 @@ body {
 
 .contents {
   width: 90%;
-  height: 65%;
+  height: 70%;
   list-style: none;
   padding: var(--base-space);
   overflow-y: scroll;
