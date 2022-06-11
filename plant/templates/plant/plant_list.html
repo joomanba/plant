@@ -8,10 +8,8 @@
 <!-- Items -->
 <ul>
 {% for plant in plants %}
-    <li>
-        <h2>
-            <a href="javascript:loadContents('/plant/{{ plant.pk }}')">{{ plant.이름 }}</a>
-        </h2>        
+    <li class="plant_list">
+        <a href="javascript:loadContents('/plant/{{ plant.pk }}')">{{ plant.이름 }}</a>      
     </li> 
 {% endfor %}
 </ul>

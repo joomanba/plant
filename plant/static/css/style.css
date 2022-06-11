@@ -145,6 +145,13 @@ body {
   margin: 0;
 }
 
+.plant_list {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-blue);
+  padding: 5px;
+}
+
 .desc {
   font-size: 18px;
   font-weight: bold;
@@ -177,3 +184,10 @@ th, td {
   padding: 10px;
 }
 
+a:link {
+  color: var(--color-blue);
+}
+
+a:visited {
+  color: var(--color-blue);
+}
