@@ -3,6 +3,11 @@ from django.db.models import Q
 from .models import Plant
 
 
+def plant_main(request):
+    plants = Plant.objects.order_by('이름')
+    return render(request, 'plant/index.html', {'plants': plants})
+
+
 def plant_list(request):
     plants = Plant.objects.order_by('이름')
     return render(request, 'plant/plant_list.html', {'plants': plants})

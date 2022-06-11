@@ -1,0 +1,126 @@
+:root {
+  /* color */
+  --color-black: #3f454d;
+  --color-white: #ffffff;
+  --color-blue: #3b88c3;
+  --color-yellow: #fbbe28;
+  --color-pink: #fd7f84;
+  --color-light-grey: #dfdfdf;
+
+  /* size */
+  --base-space: 8px;
+  --size-button: 60px;
+  --size-thumbnail: 50px;
+  --size-border: 4px;
+  --font-size: 18px;
+
+  /* annimation */
+  --size-animation-duration: 300ms;
+
+
+}
+
+body {
+  height: 100vh;
+  background-color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;  
+}
+
+.logo {
+  cursor: pointer;
+  transition: transform var(--size-animation-duration) ease;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: transform var(--size-animation-duration) ease;
+  margin-right: var(--base-space);
+}
+
+.btn:hover,
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.imgBtn {
+  width: var(--size-button);
+  height: var(--size-button);
+}
+
+.colorBtn {
+  font-size: var(--font-size);
+  padding: calc(var(--base-space) * 2);
+  border-radius: var(--size-border);
+}
+
+.blue {
+  background-color: var(--color-blue);
+}
+
+.yellow {
+  background-color: var(--color-yellow);
+}
+
+.pink {
+  background-color: var(--color-pink);
+}
+
+.contents {
+  width: 90%;
+  height: 78%;
+  list-style: none;
+  padding: var(--base-space);
+  overflow-y: scroll;
+  background-color: var(--color-white);
+}  
+
+.item {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: var(--base-space);
+  margin-bottom: var(--base-space);
+}
+
+.pop-up {
+  width: 400px;
+  height: 140px;
+  margin: auto;
+  opacity: 0.7;
+  background-color: #00000090;
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  transform: translateY(-150%);
+}
+
+.pop-up--hide {
+  display: none;
+}
+
+.pop-up_refresh {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  background-color: wheat;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+.pop-up_message {
+  display: block;
+  font-size: 38px;
+}
+
