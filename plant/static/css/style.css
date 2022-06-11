@@ -16,8 +16,6 @@
 
   /* annimation */
   --size-animation-duration: 300ms;
-
-
 }
 
 body {
@@ -26,7 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
-  align-items: center;  
+  align-items: center; 
 }
 
 .logo {
@@ -41,6 +39,7 @@ body {
   cursor: pointer;
   transition: transform var(--size-animation-duration) ease;
   margin-right: var(--base-space);
+  color:black
 }
 
 .btn:hover,
@@ -60,7 +59,6 @@ body {
 
 .colorBtn {
   font-size: var(--font-size);
-  font-style: var(--color-black);
   padding: calc(var(--base-space) * 1);
   border-radius: var(--size-border);
 }
