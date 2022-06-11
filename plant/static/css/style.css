@@ -78,7 +78,7 @@ body {
 
 .contents {
   width: 90%;
-  height: 78%;
+  height: 65%;
   list-style: none;
   padding: var(--base-space);
   overflow-y: scroll;
